@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="30" viewBox="0 0 44 30">
+  <defs>
+    <clipPath id="clip-Web_1920_1">
+      <rect width="44" height="30"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" clip-path="url(#clip-Web_1920_1)">
+    <rect width="44" height="30" fill="rgba(255,255,255,0)"/>
+    <path id="Icon_material-business-center" data-name="Icon material-business-center" d="M15,24V22.5H4.515l-.015,6a2.99,2.99,0,0,0,3,3h21a2.99,2.99,0,0,0,3-3v-6H21V24ZM30,10.5H23.985v-3l-3-3h-6l-3,3v3H6a3.009,3.009,0,0,0-3,3V18a2.99,2.99,0,0,0,3,3h9V18h6v3h9a3.009,3.009,0,0,0,3-3V13.5A3.009,3.009,0,0,0,30,10.5Zm-9,0H15v-3h6Z" transform="translate(4 -3)" fill="#fc8621" stroke="#682c0e" stroke-width="1"/>
+  </g>
+</svg>

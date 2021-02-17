@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = '../static/style/bootstrap.min.css')}}">
+    <script src="{{url_for('static', filename= '../static/js/node_modules/jquery/dist/jquery.js')}}"></script>
+    <script src="{{url_for('static', filename = '../static/js/bootstrap.min.js')}}"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{url_for('static', filename = '../static/js/bootstrap.bundle.min.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename = '../static/style/style.css')}}">
+    <link rel="icon" href="./static/Designs/logo_1.svg" type="image/svg">
+    <title>NCS</title>
+</head>
+<body>
+  <div class="bt"><a id="button"></a></div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light shadows" style="background-color: #F9E0AE">
+        <a class="navbar-brand" href="/">
+            <img src="../static/Designs/logo.svg" height="75" width="80">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#categories"><h3>Categories</h3> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url_for('team')}}"><h3>Team</h3></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="content-wrap main">
+        <div class="container-lg">
+          <div class="row mt-5">
+            <div class="col-lg-7 d-flex align-items-center">
+                <div id="home">
+                    <h1 class="display-2"><span style="color: #FC8621;">W</span>ho are we <span style="color: #FC8621;">?</span></h1>
+                    <h5 class="text-justify">(Intro -> Purpose -> future scope)    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae deserunt esse ratione possimus temporibus,
+                         reiciendis adipisci placeat alias incidunt blanditiis nostrum sit ad beatae nemo unde expedita, enim, commodi amet! Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Dolorem, minima. Nam quisquam minus similique minima quod veritatis voluptates pariatur earum consectetur aspernatur eaque illum,
+                         exercitationem error enim quaerat laboriosam praesentium.
+                        </h5>
+                </div>
+            </div>
+            <div class="col-md-5 d-flex align-items-center mt-5 mb-5">
+                <div class="home_img d-none d-sm-none d-md-none d-lg-block">
+                    <img src="../static/Designs/home.svg" alt="home">
+                </div>
+            </div>
+          </div>
+
+          <div class="d-flex flex-row justify-content-center mt-5" id="categories">
+              <h1 style="color: #682C0E; font-weight: 700;"><span style="color: #FC8621;">C</span>ategories</h1>
+              <img class="ml-2" src="../static/Designs/icon.svg" alt="icon">
+          </div>
+          <div class="row">
+            <div class="col-sm-2 col-1 border1 rounded-circle">
+
+            </div>
+            <div class="col-sm-8 col-10 border">
+              
+            </div>
+            <div class="col-sm-2 col-1">
+              
+            </div>
+          </div>
+  
+      {% for row in unique_classification | batch(3) %}
+      <div class="row mb-5">
+        {% for class in row %}
+          <div class="col-md-6 col-lg-4 column anchor">
+            
+            <a href="{{url_for('news', category = class)}}" target="" rel="noopener noreferrer">
+              <div class="card gr-1">
+                <div class="txt">
+                  <h1>{{class}}</h1>
+                  <p></p>
+                </div>
+                  <p>More . . .</p>
+                <div class="ico-card">
+                  <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+        {% endfor %}
+        </div>
+        <footer class="text-center" style="background-color: #F9E0AE">
+          <h4 class="mt-3" style="color: #682C0E; font-weight: 600;"><span style="color: #FC8621;">M</span>ade with <i class="fa fa-heart" style="color: #FC8621;" aria-hidden="true"></i></h4>
+          <div class="d-flex justify-content-center" style="color: #682C0E;">
+            <a href="#"><i class="fa fa-github-square fa-2x mr-2" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-envelope fa-2x ml-2" aria-hidden="true"></i></a>
+          </div>
+        </footer>
+
+      </div>
+    <script src="{{url_for('static', filename = '../static/js/style.js')}}"></script>
+</body>
+</html>
